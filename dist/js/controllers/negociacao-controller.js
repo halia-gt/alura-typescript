@@ -7,6 +7,8 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
+        console.log(negociacao);
+        this.limparFormulario();
     }
     criaNegociacao() {
         const exp = /-/g;
@@ -14,5 +16,7 @@ export class NegociacaoController {
         const quantidade = parseInt(this.inputQuantidade.value);
         const valor = parseInt(this.inputValor.value);
         return new Negociacao(date, quantidade, valor);
+    }
+    limparFormulario() {
     }
 }
