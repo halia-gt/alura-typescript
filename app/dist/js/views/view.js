@@ -8,7 +8,6 @@ import { inspect } from "../decorators/inspect.js";
 import { logarTempoDeExecucao } from "../decorators/logar-tempo-de-execucao.js";
 export class View {
     constructor(seletor) {
-        this.escapar = false;
         const elemento = document.querySelector(seletor);
         if (elemento) {
             this.elemento = elemento;
